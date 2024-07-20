@@ -9,10 +9,8 @@ public class Temp
 {
     public static void main(String[] args) {
         //stringUpper();
-        int[] nums = {0,1,2,2,3,0,4,2};
-        int val = 2;
-        int k = removeElement(nums, val);
-        System.out.println(k);
+        removeElement();
+
     }
 
     private static void stringUpper() {
@@ -37,7 +35,9 @@ public class Temp
         System.out.println(name1);
     }
 
-    private static int removeElement(int[] nums, int val){
+    private static void removeElement(){
+        int[] nums = {0,1,2,2,3,0,4,2};
+        int val = 2;
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] != val)
@@ -52,6 +52,32 @@ public class Temp
         }
         nums = out;
         System.out.println(Arrays.toString(nums));
-        return out.length;
+        System.out.println(out.length);
+    }
+
+    private static void luckyNumber() {
+        int[][] matrix = {{7,8},{1,2}};
+
+        List<Integer> list = new ArrayList<>();
+
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < min)
+                    min = matrix[i][j];
+            }
+            list.add(min);
+        }
+
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] > max)
+                    max = matrix[i][j];
+            }
+            list.add(max);
+        }
+
+
     }
 }

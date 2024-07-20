@@ -1,10 +1,10 @@
-package org.practice.general;
+package org.practice.interview;
 
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class Interview1 {
+public class InfosysInterview {
     /*
     Write a java function
 which excepts an arraylist as input parameter and returns an arraylist
